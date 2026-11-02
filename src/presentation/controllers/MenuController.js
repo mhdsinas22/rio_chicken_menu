@@ -1,6 +1,7 @@
 /**
  * Presentation Layer - MenuController
- * Coordinates user interactions (search, category filter, reset) with the FilterMenuItemsUseCase.
+ * Coordinates user interactions (search, category filter, reset) with the FilterMenuItemsUseCase
+ * and manages image shimmer loading states.
  */
 (function (root) {
   'use strict';
@@ -54,6 +55,7 @@
         });
       }
 
+      this._bindOriginalBannerShimmer();
       this.render();
     }
 
@@ -80,7 +82,7 @@
     }
 
     /**
-     * Executes filtering and updates the DOM.
+     * Executes filtering, updates the DOM, and attaches shimmer image load listeners.
      */
     render() {
       const { gridEl, searchEl, countEl, emptyEl, titleEl } = this._elements;
@@ -92,8 +94,10 @@
       });
 
       gridEl.innerHTML = filteredItems
-        .map((item) => this._productCard.render(item))
+        .map((item, idx) => this._productCard.render(item, idx))
         .join('');
+
+      this._bindProductImagesShimmer(gridEl);
 
       countEl.textContent = `${filteredItems.length} item${filteredItems.length === 1 ? '' : 's'}`;
       titleEl.textContent =
@@ -103,10 +107,68 @@
       emptyEl.style.display = hasItems ? 'none' : 'block';
       gridEl.style.display = hasItems ? 'grid' : 'none';
     }
+
+    /**
+     * Attaches load/error listeners to product card images to transition out of the shimmer state.
+     * @param {HTMLElement} container
+     */
+    _bindProductImagesShimmer(container) {
+      const images = container.querySelectorAll('.product-photo img');
+      images.forEach((img) => {
+        const photoWrap = img.closest('.product-photo');
+        if (!photoWrap) return;
+
+        const markLoaded = () => {
+          photoWrap.classList.remove('is-loading');
+          photoWrap.classList.add('is-loaded');
+        };
+
+        const markError = () => {
+          photoWrap.classList.remove('is-loading');
+          photoWrap.classList.add('is-loaded');
+          img.style.display = 'none';
+          const fallback = photoWrap.querySelector('.food-placeholder');
+          if (fallback) {
+            fallback.style.display = 'inline';
+          }
+        };
+
+        if (img.complete && img.naturalWidth > 0) {
+          markLoaded();
+        } else {
+          img.addEventListener('load', markLoaded, { once: true });
+          img.addEventListener('error', markError, { once: true });
+        }
+      });
+    }
+
+    /**
+     * Binds shimmer loading transition to the Original Menu artwork banner image.
+     */
+    _bindOriginalBannerShimmer() {
+      if (typeof document === 'undefined') return;
+      const bannerImg = document.querySelector('.original-img');
+      if (!bannerImg) return;
+
+      const wrap = bannerImg.closest('.original-photo-wrap');
+      const markBannerLoaded = () => {
+        bannerImg.classList.add('is-loaded');
+        if (wrap) {
+          wrap.classList.remove('is-loading');
+          wrap.classList.add('is-loaded');
+        }
+      };
+
+      if (bannerImg.complete && bannerImg.naturalWidth > 0) {
+        markBannerLoaded();
+      } else {
+        bannerImg.addEventListener('load', markBannerLoaded, { once: true });
+        bannerImg.addEventListener('error', markBannerLoaded, { once: true });
+      }
+    }
   }
 
   root.RioMenu = root.RioMenu || {};
   root.RioMenu.Presentation = root.RioMenu.Presentation || {};
   root.RioMenu.Presentation.MenuController = MenuController;
 })(typeof window !== 'undefined' ? window : globalThis);
-

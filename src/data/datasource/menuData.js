@@ -52,7 +52,7 @@
       "quantity": "4 pcs",
       "emoji": "🍗",
       "description": "4 pieces",
-      "image": "assets/images/items/Crispy Fried Chicken Feast with Fries.png"
+      "image": "assets/images/items/Crispy Fried Chicken Feast with Fries.webp"
     },
     {
       "id": "item-02",
@@ -62,7 +62,7 @@
       "quantity": "4 pcs",
       "emoji": "🍗",
       "description": "4 pieces",
-      "image": "assets/images/items/Crispy Fried Chicken Feast with Fr.png"
+      "image": "assets/images/items/Crispy Fried Chicken Feast with Fr.webp"
     },
     {
       "id": "item-03",
@@ -72,7 +72,7 @@
       "quantity": "16 pcs",
       "emoji": "🍗",
       "description": "Family pack",
-      "image": "assets/images/items/Crispy Chicken Feast with Fries and Sauces.png"
+      "image": "assets/images/items/Crispy Chicken Feast with Fries and Sauces.webp"
     },
     {
       "id": "item-04",
@@ -82,7 +82,7 @@
       "quantity": "12 pcs",
       "emoji": "🍗",
       "description": "Family pack",
-      "image": "assets/images/items/Crispy Chicken Feast with Fries and Sauces.png"
+      "image": "assets/images/items/Crispy Chicken Feast with Fries and Sauces.webp"
     },
     {
       "id": "item-05",
@@ -92,7 +92,7 @@
       "quantity": "8 pcs",
       "emoji": "🍗",
       "description": "8 pieces",
-      "image": "assets/images/items/Golden Chicken Nuggets with Dips and Fries.png"
+      "image": "assets/images/items/Golden Chicken Nuggets with Dips and Fries.webp"
     },
     {
       "id": "item-06",
@@ -102,7 +102,7 @@
       "quantity": "8 pcs",
       "emoji": "🍗",
       "description": "8 pieces",
-      "image": "assets/images/items/Spicy Chicken Nuggets Meal Plate.png"
+      "image": "assets/images/items/Spicy Chicken Nuggets Meal Plate.webp"
     },
     {
       "id": "item-07",
@@ -112,7 +112,7 @@
       "quantity": "8 pcs",
       "emoji": "🧀",
       "description": "8 pieces",
-      "image": "assets/images/items/Crispy Cheese Sticks with Fries and Dips.png"
+      "image": "assets/images/items/Crispy Cheese Sticks with Fries and Dips.webp"
     },
     {
       "id": "item-08",
@@ -122,7 +122,7 @@
       "quantity": "8 pcs",
       "emoji": "🐟",
       "description": "8 pieces",
-      "image": "assets/images/items/Crispy Fish Fillets with Fries and Dips.png"
+      "image": "assets/images/items/Crispy Fish Fillets with Fries and Dips.webp"
     },
     {
       "id": "item-09",
@@ -132,7 +132,7 @@
       "quantity": "8 pcs",
       "emoji": "🐟",
       "description": "8 pieces",
-      "image": "assets/images/items/Spicy Crispy Fish Fillets with Fries.png"
+      "image": "assets/images/items/Spicy Crispy Fish Fillets with Fries.webp"
     },
     {
       "id": "item-10",
@@ -142,7 +142,7 @@
       "quantity": "4 pcs",
       "emoji": "🍗",
       "description": "4 pieces",
-      "image": "assets/images/items/Crispy Fried Chicken with Fries and Dips.png"
+      "image": "assets/images/items/Crispy Fried Chicken with Fries and Dips.webp"
     },
     {
       "id": "item-11",
@@ -152,7 +152,7 @@
       "quantity": "4 pcs",
       "emoji": "🍗",
       "description": "4 pieces",
-      "image": "assets/images/items/Crispy Spicy Chicken Platter with Chillies.png"
+      "image": "assets/images/items/Crispy Spicy Chicken Platter with Chillies.webp"
     },
     {
       "id": "item-12",
@@ -162,7 +162,7 @@
       "quantity": "10 pcs",
       "emoji": "🍤",
       "description": "10 pieces",
-      "image": "assets/images/items/Crispy Shrimp, Fries and Dips.png"
+      "image": "assets/images/items/Crispy Shrimp, Fries and Dips.webp"
     },
     {
       "id": "item-13",
@@ -172,7 +172,7 @@
       "quantity": "8 pcs",
       "emoji": "🍗",
       "description": "8 pieces",
-      "image": "assets/images/items/Crispy Popcorn Chicken Bucket.png"
+      "image": "assets/images/items/Crispy Popcorn Chicken Bucket.webp"
     },
     {
       "id": "item-14",
@@ -182,7 +182,7 @@
       "quantity": "4 pcs",
       "emoji": "🍗",
       "description": "4 pieces",
-      "image": "assets/images/items/Crispy Chicken Strips with Fries and Dips.png"
+      "image": "assets/images/items/Crispy Chicken Strips with Fries and Dips.webp"
     },
     {
       "id": "item-15",
@@ -192,7 +192,7 @@
       "quantity": "4 pcs",
       "emoji": "🍗",
       "description": "4 pieces",
-      "image": "assets/images/items/Spicy Chili Chicken Strips.png"
+      "image": "assets/images/items/Spicy Chili Chicken Strips.webp"
     },
     {
       "id": "item-16",
@@ -202,7 +202,7 @@
       "quantity": "6 pcs",
       "emoji": "🍗",
       "description": "6 pieces",
-      "image": "assets/images/items/Golden Crispy Rio Chicken Box.png"
+      "image": "assets/images/items/Golden Crispy Rio Chicken Box.webp"
     },
     {
       "id": "item-17",
@@ -212,7 +212,7 @@
       "quantity": "6 pcs",
       "emoji": "🍗",
       "description": "6 pieces",
-      "image": "assets/images/items/Spicy Rio Chicken Box with Fries.png"
+      "image": "assets/images/items/Spicy Rio Chicken Box with Fries.webp"
     },
     {
       "id": "item-18",
@@ -222,7 +222,7 @@
       "quantity": "",
       "emoji": "🥪",
       "description": "",
-      "image": "assets/images/items/Grilled Chicken Wrap Combo with Fries and Pepsi.png"
+      "image": "assets/images/items/Grilled Chicken Wrap Combo with Fries and Pepsi.webp"
     },
     {
       "id": "item-19",
@@ -232,7 +232,7 @@
       "quantity": "",
       "emoji": "🥪",
       "description": "",
-      "image": "assets/images/items/Crispy Chicken Wrap Feast.png"
+      "image": "assets/images/items/Crispy Chicken Wrap Feast.webp"
     },
     {
       "id": "item-20",
@@ -242,7 +242,7 @@
       "quantity": "",
       "emoji": "🥪",
       "description": "",
-      "image": "assets/images/items/Crispy Fish Wrap Meal with Fries and Pepsi.png"
+      "image": "assets/images/items/Crispy Fish Wrap Meal with Fries and Pepsi.webp"
     },
     {
       "id": "item-21",
@@ -252,7 +252,7 @@
       "quantity": "",
       "emoji": "🥪",
       "description": "",
-      "image": "assets/images/items/Crispy Shrimp Wrap Meal.png"
+      "image": "assets/images/items/Crispy Shrimp Wrap Meal.webp"
     },
     {
       "id": "item-22",
@@ -262,7 +262,7 @@
       "quantity": "",
       "emoji": "🌯",
       "description": "",
-      "image": "assets/images/items/Crispy Chicken Tortilla Wrap Meal.png"
+      "image": "assets/images/items/Crispy Chicken Tortilla Wrap Meal.webp"
     },
     {
       "id": "item-23",
@@ -272,7 +272,7 @@
       "quantity": "",
       "emoji": "🥪",
       "description": "",
-      "image": "assets/images/items/Classic Club Sandwich Platter.png"
+      "image": "assets/images/items/Classic Club Sandwich Platter.webp"
     },
     {
       "id": "item-24",
@@ -282,7 +282,7 @@
       "quantity": "",
       "emoji": "🍟",
       "description": "",
-      "image": "assets/images/items/Crispy Chicken Fries Bowl.png"
+      "image": "assets/images/items/Crispy Chicken Fries Bowl.webp"
     },
     {
       "id": "item-25",
@@ -292,7 +292,7 @@
       "quantity": "05 / 07 / 12",
       "emoji": "🍟",
       "description": "Price options shown as 05 / 07 / 12",
-      "image": "assets/images/items/Crispy Golden Fries in White Tray.png"
+      "image": "assets/images/items/Crispy Golden Fries in White Tray.webp"
     },
     {
       "id": "item-26",
@@ -302,7 +302,7 @@
       "quantity": "",
       "emoji": "🍔",
       "description": "",
-      "image": "assets/images/items/Crispy Chicken Burger Feast.png"
+      "image": "assets/images/items/Crispy Chicken Burger Feast.webp"
     },
     {
       "id": "item-27",
@@ -312,7 +312,7 @@
       "quantity": "",
       "emoji": "🍔",
       "description": "",
-      "image": "assets/images/items/Juicy Double Beef Burger Meal.png"
+      "image": "assets/images/items/Juicy Double Beef Burger Meal.webp"
     },
     {
       "id": "item-28",
@@ -322,7 +322,7 @@
       "quantity": "",
       "emoji": "🍔",
       "description": "",
-      "image": "assets/images/items/Crispy Chicken Zinger Combo.png"
+      "image": "assets/images/items/Crispy Chicken Zinger Combo.webp"
     },
     {
       "id": "item-29",
@@ -332,7 +332,7 @@
       "quantity": "",
       "emoji": "🍔",
       "description": "",
-      "image": "assets/images/items/Double Chicken Burger Combo on Yellow.png"
+      "image": "assets/images/items/Double Chicken Burger Combo on Yellow.webp"
     },
     {
       "id": "item-30",
@@ -342,7 +342,7 @@
       "quantity": "",
       "emoji": "🍔",
       "description": "",
-      "image": "assets/images/items/Double Beef Burger Feast.png"
+      "image": "assets/images/items/Double Beef Burger Feast.webp"
     },
     {
       "id": "item-31",
@@ -352,7 +352,7 @@
       "quantity": "",
       "emoji": "🍔",
       "description": "",
-      "image": "assets/images/items/Crispy Fish Burger Meal with Fries and Soda.png"
+      "image": "assets/images/items/Crispy Fish Burger Meal with Fries and Soda.webp"
     },
     {
       "id": "item-32",
@@ -362,7 +362,7 @@
       "quantity": "1 meal",
       "emoji": "🧒",
       "description": "",
-      "image": "assets/images/items/Colourful Kids Meal with Mango Juice and Nuggets.png"
+      "image": "assets/images/items/Colourful Kids Meal with Mango Juice and Nuggets.webp"
     },
     {
       "id": "item-33",
@@ -372,7 +372,7 @@
       "quantity": "",
       "emoji": "🥗",
       "description": "",
-      "image": "assets/images/items/Creamy Coleslaw in a White Bowl.png"
+      "image": "assets/images/items/Creamy Coleslaw in a White Bowl.webp"
     },
     {
       "id": "item-34",
@@ -382,7 +382,7 @@
       "quantity": "",
       "emoji": "🥣",
       "description": "",
-      "image": "assets/images/items/Creamy Hummus with Chickpeas and Parsley.png"
+      "image": "assets/images/items/Creamy Hummus with Chickpeas and Parsley.webp"
     },
     {
       "id": "item-35",
@@ -392,7 +392,7 @@
       "quantity": "",
       "emoji": "🧄",
       "description": "",
-      "image": "assets/images/items/Creamy Garlic Dip in Black Ramekin.png"
+      "image": "assets/images/items/Creamy Garlic Dip in Black Ramekin.webp"
     },
     {
       "id": "item-36",
@@ -402,7 +402,7 @@
       "quantity": "",
       "emoji": "🌶️",
       "description": "",
-      "image": "assets/images/items/Creamy Orange Garlic-Spice Sauce.png"
+      "image": "assets/images/items/Creamy Orange Garlic-Spice Sauce.webp"
     },
     {
       "id": "item-37",
@@ -412,7 +412,7 @@
       "quantity": "",
       "emoji": "🥫",
       "description": "",
-      "image": "assets/images/items/Glossy Orange Sauce Cup.png"
+      "image": "assets/images/items/Glossy Orange Sauce Cup.webp"
     },
     {
       "id": "item-38",
@@ -422,7 +422,7 @@
       "quantity": "",
       "emoji": "🍅",
       "description": "",
-      "image": "assets/images/items/Glossy Ketchup Spiral in White Bowl.png"
+      "image": "assets/images/items/Glossy Ketchup Spiral in White Bowl.webp"
     },
     {
       "id": "item-39",
@@ -432,7 +432,7 @@
       "quantity": "",
       "emoji": "🥫",
       "description": "",
-      "image": "assets/images/items/Glossy BBQ Sauce in Ribbed Ramekin.png"
+      "image": "assets/images/items/Glossy BBQ Sauce in Ribbed Ramekin.webp"
     }
   ];
 

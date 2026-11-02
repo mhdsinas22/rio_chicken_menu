@@ -138,15 +138,38 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+/* Shimmer Skeleton Animation */
+@keyframes rioShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 .product-photo {
+  position: relative;
   width: 100%;
-  aspect-ratio: 1/ 1;
+  aspect-ratio: 1 / 1;
   background: #fff;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.product-photo.is-loading,
+.original-photo-wrap.is-loading {
+  background: linear-gradient(
+    110deg,
+    #f3e5d7 8%,
+    #fffaf3 18%,
+    #f3e5d7 33%
+  );
+  background-size: 200% 100%;
+  animation: rioShimmer 1.3s linear infinite;
 }
 
 .product-photo img {
@@ -156,6 +179,19 @@
   object-position: center;
   display: block;
   border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.product-photo.is-loaded {
+  background: #fff;
+  animation: none;
+}
+
+.product-photo.is-loaded img {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .food-placeholder {
@@ -259,11 +295,32 @@
   margin: 4px 0 0;
 }
 
+.original-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: #fff;
+}
+
 .original-img {
   display: block;
   width: 100%;
   height: auto;
   background: #fff;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.original-photo-wrap.is-loaded {
+  aspect-ratio: auto;
+  background: #fff;
+  animation: none;
+}
+
+.original-photo-wrap.is-loaded .original-img,
+.original-img.is-loaded {
+  opacity: 1;
 }
 
 .original-controls {
@@ -359,4 +416,3 @@
     font-size: 15px;
   }
 }
-
