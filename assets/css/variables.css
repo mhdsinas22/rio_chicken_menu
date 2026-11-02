@@ -1,0 +1,19 @@
+:root {
+  --site-primary: #c9271c;
+  --site-secondary: #ffe000;
+  --site-background: #fff8ee;
+  --site-on-primary: #fff;
+  --site-on-secondary: #28100b;
+  --site-on-background: #281915;
+  --site-font-body: Arial, Helvetica, sans-serif;
+  --site-font-heading: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --red: #c9271c;
+  --yellow: #ffe000;
+  --ink: #281915;
+  --muted: #80665c;
+  --line: #efdfd2;
+}
+
