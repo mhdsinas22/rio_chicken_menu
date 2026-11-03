@@ -2,18 +2,37 @@
   --site-primary: #c9271c;
   --site-secondary: #ffe000;
   --site-background: #fff8ee;
-  --site-on-primary: #fff;
+  --site-on-primary: #ffffff;
   --site-on-secondary: #28100b;
-  --site-on-background: #281915;
-  --site-font-body: Arial, Helvetica, sans-serif;
-  --site-font-heading: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --site-on-background: #241410;
+  --site-font-body: "Segoe UI", Tahoma, -apple-system, BlinkMacSystemFont, Roboto, "Noto Sans Arabic", Arial, sans-serif;
+  --site-font-heading: Impact, Haettenschweiler, "Arial Narrow Bold", "Segoe UI", Tahoma, sans-serif;
   --site-heading-scale: 1;
   --site-spacing-scale: 1;
   --site-radius-scale: 1;
-  --red: #c9271c;
-  --yellow: #ffe000;
-  --ink: #281915;
-  --muted: #80665c;
-  --line: #efdfd2;
-}
 
+  /* Core Brand Palette */
+  --red: #c9271c;
+  --red-dark: #99130b;
+  --red-soft: #fff1ed;
+  --yellow: #ffe000;
+  --yellow-soft: #fff0bd;
+  --surface: #ffffff;
+  --ink: #241410;
+  --muted: #684d43;
+  --line: #ead9cb;
+  --success: #1b9e4b;
+  --danger: #b4160b;
+
+  /* Elevation & Focus */
+  --shadow-sm: 0 4px 14px rgba(48, 20, 10, 0.06);
+  --shadow-md: 0 10px 26px rgba(48, 20, 10, 0.12);
+  --shadow-lg: 0 16px 38px rgba(32, 12, 6, 0.24);
+  --focus-ring: 0 0 0 3px rgba(201, 39, 28, 0.32);
+
+  /* Dynamic Viewport & Safe Areas */
+  --vvh: 100vh;
+  --vvh: 100dvh;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}

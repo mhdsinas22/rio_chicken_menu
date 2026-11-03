@@ -1,30 +1,41 @@
 /**
- * Domain Layer - CurrencyFormatter Service
- * Handles price formatting rules in Saudi Riyal (SAR).
+ * Domain Service - CurrencyFormatter
+ * Formats item prices according to Saudi Riyal (SAR) domain rules.
  */
 (function (root) {
   'use strict';
 
+  const CURRENCY_CODE = 'SAR';
+
   class CurrencyFormatter {
     /**
-     * @param {string} [currencyCode='SAR']
+     * Returns the currency code.
+     * @returns {string}
      */
-    constructor(currencyCode = 'SAR') {
-      this.currencyCode = currencyCode;
+    static get currencyCode() {
+      return CURRENCY_CODE;
     }
 
     /**
-     * Formats a numeric price or returns a fallback label when price is null.
-     * @param {number|null} amount
-     * @param {string} [nullFallback='See menu']
+     * Formats a numeric amount in SAR (e.g., "18 SAR").
+     * @param {number} amount
      * @returns {string}
      */
-    format(amount, nullFallback = 'See menu') {
-      if (amount === null || amount === undefined) {
-        return nullFallback;
+    static formatAmount(amount) {
+      const num = Number(amount) || 0;
+      return `${num} ${CURRENCY_CODE}`;
+    }
+
+    /**
+     * Formats a MenuItem price into display HTML.
+     * @param {InstanceType<typeof root.RioMenu.Domain.MenuItem>} item
+     * @returns {string}
+     */
+    static formatHtml(item) {
+      if (item.hasNumericPrice) {
+        return `${item.price} <small>${CURRENCY_CODE}</small>`;
       }
-      const formattedNumber = Number.isInteger(amount) ? String(amount) : Number(amount).toFixed(2);
-      return `${formattedNumber} ${this.currencyCode}`;
+      return `${item.quantity || 'Ask'} <small>${CURRENCY_CODE}</small>`;
     }
   }
 
@@ -32,4 +43,3 @@
   root.RioMenu.Domain = root.RioMenu.Domain || {};
   root.RioMenu.Domain.CurrencyFormatter = CurrencyFormatter;
 })(typeof window !== 'undefined' ? window : globalThis);
-

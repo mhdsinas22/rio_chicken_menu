@@ -1,120 +1,326 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#ffe000">
-  <title>RIO Chicken | Digital Menu</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover" />
+  <title>ريو تشيكن | RIO Chicken — القائمة الرقمية والطلب عبر واتساب</title>
+  <link rel="icon" href="assets/images/icon/Rio Chicken Flame Emblem.png" />
+  <meta name="description" content="RIO Chicken Riyadh mobile-friendly digital menu. Browse broast chicken, burgers, sandwiches, sides, sauces and order directly via WhatsApp." />
+  <meta name="theme-color" content="#c9271c" />
 
-  <!-- Modular Stylesheets -->
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to menu / تخطي إلى القائمة</a>
   <div class="app">
+    <!-- Top Sticky Header -->
     <header class="header">
-      <div class="logo">RIO <b>CHICKEN</b></div>
-      <div class="header-tag">Crispy · Tasty<br>Made for you</div>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="RIO Chicken Home">
+          <div class="logo-container">
+            <img src="assets/images/icon/Rio Chicken Flame Emblem.png" alt="Rio Chicken" decoding="async" />
+          </div>
+          <div class="brand-text">
+            <h1 data-i18n="brandName">ريو تشيكن</h1>
+            <p data-i18n="brandSub">الرياض • توصيل سريع • القائمة الرقمية</p>
+          </div>
+        </a>
+        <div class="header-actions">
+          <button class="lang-btn" id="langToggleBtn" type="button" aria-label="Switch Language / تغيير اللغة">
+            🌐 <span data-i18n="langSwitch">English</span>
+          </button>
+          <button class="header-cart-btn" id="headerCartBtn" type="button" aria-label="Open shopping cart">
+            🛒 <span class="header-cart-count" id="headerCartCount" style="display:none;">0</span>
+          </button>
+          <a class="btn yellow-btn header-call-btn" href="tel:+966503839301" data-i18n="callBtn">📞 اتصال</a>
+        </div>
+      </div>
     </header>
 
-    <section class="hero">
-      <div class="kicker">Welcome to RIO Chicken</div>
-      <h1>YOUR FAVOURITES.<br><span>ALL IN ONE MENU.</span></h1>
-      <p>Browse each item, check the price and find what you’re craving. Made easy for your phone.</p>
-      <div class="hero-actions">
-        <a class="btn yellow-btn" href="#menuItems">🍗 Browse menu ↓</a>
-        <a class="btn white-btn" href="https://wa.me/966503839301?text=Hello%20RIO%20Chicken%21">💬 Contact us</a>
+    <!-- Hero Banner -->
+    <section class="hero" id="top">
+      <div class="hero-card">
+        <div>
+          <span class="badge" data-i18n="heroBadge">🔥 توصيل مجاني • الرياض</span>
+          <h2 class="hero-title" data-i18n="heroTitle">بروست مقرمش، برجر وساندوتشات</h2>
+          <p class="hero-copy" data-i18n="heroCopy">اضغط على أي صنف لتحديد الكمية وإضافته إلى السلة ثم إرسال طلبك مباشرة عبر واتساب.</p>
+          <div class="hero-actions">
+            <a class="btn yellow-btn" href="tel:+966503839301" data-i18n="callToOrderBtn">📞 اتصل للطلب</a>
+            <a class="btn white-btn" href="#originalMenu" data-i18n="fullMenuImageBtn">🖼️ صورة المنيو الكاملة</a>
+          </div>
+        </div>
+        <div class="hero-banner">
+          <img src="assets/images/menu/original-menu-banner.jpg" alt="RIO Chicken Menu Preview" decoding="async" />
+        </div>
       </div>
     </section>
 
-    <main>
-      <div class="section-top">
+    <!-- Main Menu Content -->
+    <main class="container" id="mainContent">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">🔎</span>
+        <input
+          id="searchInput"
+          class="search"
+          type="search"
+          enterkeyhint="search"
+          autocomplete="off"
+          placeholder="ابحث عن بروست، زنجر، برجر، جمبري، ثوم..."
+          data-i18n-placeholder="searchPlaceholder"
+          aria-label="Search menu items"
+        />
+        <button
+          id="clearSearchBtn"
+          class="search-clear-btn"
+          type="button"
+          aria-label="Clear search"
+          data-i18n-aria="closeModalAria"
+        >×</button>
+      </div>
+
+      <div class="filters" id="filters" role="tablist" aria-label="Menu Categories"></div>
+
+      <div class="note">
+        <div class="note-icon" aria-hidden="true">💬</div>
         <div>
-          <h2>EXPLORE MENU</h2>
-          <p>Pick a category or search for a favourite</p>
+          <strong data-i18n="noteTitle">اطلب بسهولة عبر واتساب</strong>
+          <small data-i18n="noteDesc">اختر أصنافك المفضلة، حدد الكميات في السلة، وأكد طلبك مباشرة عبر واتساب.</small>
         </div>
       </div>
 
-      <div class="search-wrap">
-        <span>⌕</span>
-        <input class="search" id="search" type="search" placeholder="Search menu items..." aria-label="Search menu items">
+      <div class="section-head">
+        <h3 class="section-title" id="sectionTitle">جميع الأصناف</h3>
+        <span class="pill" id="itemCount" aria-live="polite">39 صنف</span>
       </div>
 
-      <nav class="filters" aria-label="Filter menu">
-        <button class="filter active" data-category="All">✨ All items</button>
-        <button class="filter" data-category="Chicken">🍗 Chicken</button>
-        <button class="filter" data-category="Burgers">🍔 Burgers</button>
-        <button class="filter" data-category="Sandwiches">🥪 Sandwiches</button>
-        <button class="filter" data-category="Sides">🍟 Sides</button>
-        <button class="filter" data-category="Sauces">🥫 Sauces</button>
-        <button class="filter" data-category="Kids">🧒 Kids meal</button>
-      </nav>
-      <div class="grid-head" id="menuItems">
-        <h3 id="gridTitle">ALL MENU ITEMS</h3>
-        <span class="count" id="count">Loading items…</span>
-      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" role="status" aria-live="polite" data-i18n="emptySearch">لا توجد أصناف مطابقة لبحثك. جرب البحث عن "زنجر" أو "برجر" أو "بطاطس".</div>
 
-      <div class="product-grid" id="grid"></div>
-      <div class="empty" id="empty">No matching items. Try another search or category.</div>
-
-      <section class="contact">
-        <h2>READY TO ASK US?</h2>
-        <p>Contact RIO Chicken on WhatsApp if you have a question about an item or price.</p>
-        <a class="btn" href="https://wa.me/966503839301?text=Hello%20RIO%20Chicken%2C%20I%20have%20a%20question%20about%20the%20menu.">Chat on WhatsApp ↗</a>
-      </section>
-
-      <section class="original">
+      <!-- Original Menu Artwork Card -->
+      <section class="original" id="originalMenu">
         <div class="original-head">
           <div>
-            <h3>ORIGINAL RIO MENU</h3>
-            <p>Check the supplied menu artwork for reference</p>
+            <h3 data-i18n="originalTitle">لوحة المنيو الأصلية</h3>
+            <p data-i18n="originalSub">اضغط للتكبير وعرض صورة المنيو الأصلية بدقة عالية.</p>
           </div>
+          <span class="pill">HD VIEW</span>
         </div>
-        <img class="original-img" src="assets/images/menu/original-menu-banner.jpg" alt="Original RIO Chicken menu with food photos and prices" loading="lazy">
+        <img class="original-img" src="assets/images/menu/original-menu-banner.jpg" alt="Original RIO Chicken Menu" loading="lazy" decoding="async" />
         <div class="original-controls">
-          <button id="zoom">⤢ Enlarge original menu</button>
-          <button id="showAll">↻ Show all items</button>
+          <button type="button" id="openZoom" data-i18n="zoomBtn">🔍 تكبير بملء الشاشة</button>
+          <a class="btn yellow-btn" style="flex:1" href="tel:+966503839301" data-i18n="callNumberBtn">📞 اتصال 9301 383 50 966+</a>
         </div>
       </section>
+
+      <footer class="footer">
+        <strong data-i18n="brandName">ريو تشيكن</strong><br />
+        <span data-i18n="footerDesc">الرياض • توصيل مجاني • القائمة الرقمية والطلب عبر واتساب</span><br />
+        Tel: <a href="tel:+966503839301" style="color:var(--red);font-weight:800;text-decoration:none" dir="ltr">+966 50 383 9301</a>
+      </footer>
     </main>
 
-    <footer class="footer">
-      RIO CHICKEN<br>
-      Delivery available · WhatsApp: +966 50 383 9301<br>
-      Thank you for choosing us ❤️
-    </footer>
+    <!-- Floating Shopping Cart Button -->
+    <button class="floating-cart-btn" id="floatingCartBtn" type="button" aria-label="View Shopping Cart">
+      <div class="floating-cart-left">
+        <span class="floating-cart-badge" id="floatingCartCount">0</span>
+        <span class="floating-cart-label" data-i18n="viewCartBtn">عرض السلة</span>
+      </div>
+      <span class="floating-cart-total" id="floatingCartTotal" dir="ltr">0 SAR</span>
+    </button>
 
-    <div class="sticky">
-      <a class="btn" href="https://wa.me/966503839301?text=Hello%20RIO%20Chicken%21">💬 Contact RIO Chicken on WhatsApp</a>
+    <!-- Fullscreen Zoom Modal (Original Menu Artwork) -->
+    <div class="modal" id="zoomModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Original Menu Full Screen">
+      <button class="close" id="closeModal" type="button" aria-label="إغلاق" data-i18n-aria="closeModalAria">×</button>
+      <img src="assets/images/menu/original-menu-zoom.jpg" alt="Full resolution RIO Chicken Menu" loading="lazy" decoding="async" />
     </div>
 
-    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Original menu zoom">
-      <button class="close" id="close" aria-label="Close">×</button>
-      <img src="assets/images/menu/original-menu-zoom.jpg" alt="Original RIO Chicken menu enlarged" loading="lazy">
+    <!-- Product Selection Popup Modal -->
+    <div class="sheet-modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="productModalName">
+      <div class="sheet-dialog product-dialog">
+        <button class="sheet-close" id="closeProductModal" type="button" aria-label="إغلاق" data-i18n-aria="closeModalAria">×</button>
+        <div class="product-modal-media" id="productModalMedia"></div>
+        <div class="product-modal-body">
+          <div class="product-modal-top">
+            <span class="pill" id="productModalCategory">دجاج</span>
+            <div class="product-modal-price" id="productModalPrice" dir="ltr">18 <small>SAR</small></div>
+          </div>
+          <h3 class="product-modal-title" id="productModalName">دجاج بروست عادي</h3>
+          <p class="product-modal-desc" id="productModalDesc">4 قطع</p>
+
+          <!-- Optional Size Selection (e.g. French Fries 05 / 07 / 12 SAR) -->
+          <div class="product-options-section" id="productOptionsSection" style="display:none;">
+            <label class="field-label" data-i18n="selectSizeLabel">اختر الحجم</label>
+            <div class="product-options-list" id="productOptionsList" role="group" aria-label="Size options"></div>
+          </div>
+
+          <!-- Quantity Controls -->
+          <div class="product-qty-row">
+            <span class="field-label" data-i18n="quantityLabel">الكمية</span>
+            <div class="qty-stepper">
+              <button type="button" class="qty-btn" id="qtyMinusBtn" aria-label="Decrease quantity">−</button>
+              <span class="qty-num" id="qtyValue" aria-live="polite">1</span>
+              <button type="button" class="qty-btn" id="qtyPlusBtn" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <button type="button" class="btn primary-order-btn" id="addToCartBtn">
+            <span>🛒 <span data-i18n="addToCartBtn">أضف إلى السلة</span></span>
+            <span class="btn-price-tag" dir="ltr">18 SAR</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart & Checkout Modal -->
+    <div class="sheet-modal" id="cartModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cartModalTitle">
+      <div class="sheet-dialog cart-dialog">
+        <div class="cart-modal-header">
+          <div class="sheet-drag-handle" aria-hidden="true"></div>
+          <div class="cart-modal-header-top">
+            <h3 id="cartModalTitle" data-i18n="cartTitle">سلة الطلبات</h3>
+            <div class="cart-header-actions">
+              <button type="button" class="clear-cart-btn" id="clearCartBtn" data-i18n="clearCartBtn">إفراغ السلة</button>
+              <button class="sheet-close static-close" id="closeCartModal" type="button" aria-label="إغلاق" data-i18n-aria="closeModalAria">×</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-modal-scroll">
+          <!-- Empty Cart State -->
+          <div class="cart-empty-state" id="cartEmptyState">
+            <div class="cart-empty-icon" aria-hidden="true">🛒</div>
+            <h4 data-i18n="cartEmptyTitle">سلة الطلبات فارغة</h4>
+            <p data-i18n="cartEmptySub">اضغط على أي صنف شهي من القائمة لإضافته إلى طلبك.</p>
+            <button type="button" class="btn yellow-btn" id="browseMenuBtn" data-i18n="browseMenuBtn">تصفح القائمة</button>
+          </div>
+
+          <!-- Filled Cart & Checkout Content -->
+          <div id="cartFilledContent" style="display:none;">
+            <div class="cart-items-list" id="cartItemsList"></div>
+
+            <!-- Cart Summary Totals -->
+            <div class="cart-summary-card">
+              <div class="summary-row">
+                <span data-i18n="subtotalLabel">المجموع الفرعي</span>
+                <strong id="cartSubtotal" dir="ltr">0 SAR</strong>
+              </div>
+              <div class="summary-row">
+                <span data-i18n="deliveryFeeLabel">التوصيل</span>
+                <span class="free-badge" data-i18n="freeDeliveryText">مجاني</span>
+              </div>
+              <div class="summary-row total-row">
+                <span data-i18n="totalLabel">الإجمالي النهائي</span>
+                <strong id="cartTotal" dir="ltr">0 SAR</strong>
+              </div>
+            </div>
+
+            <!-- Customer Checkout Form -->
+            <form class="checkout-section" id="checkoutForm" novalidate>
+              <h4 class="checkout-heading" data-i18n="checkoutTitle">بيانات العميل والتوصيل</h4>
+
+              <div class="form-group">
+                <label class="field-label" for="customerNameInput" data-i18n="customerNameLabel">اسم العميل *</label>
+                <input
+                  id="customerNameInput"
+                  class="form-input"
+                  type="text"
+                  autocomplete="name"
+                  enterkeyhint="next"
+                  required
+                  placeholder="أدخل اسمك الكامل"
+                  data-i18n-placeholder="customerNamePlaceholder"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="field-label" for="customerPhoneInput" data-i18n="customerPhoneLabel">رقم الجوال *</label>
+                <input
+                  id="customerPhoneInput"
+                  class="form-input"
+                  type="tel"
+                  inputmode="tel"
+                  dir="ltr"
+                  autocomplete="tel"
+                  enterkeyhint="next"
+                  required
+                  placeholder="مثال: 05XXXXXXXX"
+                  data-i18n-placeholder="customerPhonePlaceholder"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="field-label" data-i18n="orderTypeLabel">نوع الطلب *</label>
+                <div class="order-type-toggle" role="group" aria-label="Order Type">
+                  <button
+                    type="button"
+                    class="order-type-btn active"
+                    id="deliveryTypeBtn"
+                    aria-pressed="true"
+                    data-i18n="deliveryOption"
+                  >🛵 توصيل</button>
+                  <button
+                    type="button"
+                    class="order-type-btn"
+                    id="pickupTypeBtn"
+                    aria-pressed="false"
+                    data-i18n="pickupOption"
+                  >🏪 استلام من الفرع</button>
+                </div>
+              </div>
+
+              <div class="form-group" id="deliveryAddressGroup">
+                <label class="field-label" for="deliveryAddressInput" data-i18n="deliveryAddressLabel">عنوان التوصيل *</label>
+                <textarea
+                  id="deliveryAddressInput"
+                  class="form-input form-textarea"
+                  rows="2"
+                  enterkeyhint="send"
+                  placeholder="الحي، الشارع، رقم المبنى أو تفاصيل الموقع..."
+                  data-i18n-placeholder="deliveryAddressPlaceholder"
+                ></textarea>
+              </div>
+
+              <div class="checkout-error" id="checkoutError" role="alert" aria-live="assertive" style="display:none;"></div>
+
+              <button type="submit" class="btn whatsapp-confirm-btn" id="confirmOrderBtn">
+                <span data-i18n="confirmOrderBtn">💬 تأكيد الطلب عبر واتساب</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">تمت الإضافة إلى السلة!</div>
+
+    <!-- Bottom Sticky Action Bar -->
+    <div class="sticky-call">
+      <div class="sticky-inner">
+        <a class="btn yellow-btn" href="tel:+966503839301" data-i18n="stickyCallBtn">📞 اتصل الآن: 9301 383 50 966+</a>
+        <button class="btn white-btn sticky-cart-trigger" id="stickyCartBtn" type="button">
+          🛒 <span data-i18n="viewCartBtn">عرض السلة</span> (<span id="stickyCartCount">0</span>)
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- Clean Architecture Scripts -->
-  <!-- 1. Domain Layer -->
+  <!-- Clean Architecture Application Scripts -->
   <script defer src="src/domain/entities/MenuItem.js"></script>
   <script defer src="src/domain/services/CurrencyFormatter.js"></script>
-
-  <!-- 2. Data Layer -->
+  <script defer src="src/domain/services/I18nService.js"></script>
+  <script defer src="src/domain/services/CartService.js"></script>
+  <script defer src="src/domain/services/WhatsAppOrderService.js"></script>
   <script defer src="src/data/datasource/menuData.js"></script>
   <script defer src="src/data/repositories/MenuRepository.js"></script>
-
-  <!-- 3. Application Layer (Use Cases) -->
   <script defer src="src/application/usecases/FilterMenuItemsUseCase.js"></script>
-
-  <!-- 4. Presentation Layer -->
   <script defer src="src/presentation/components/ProductCard.js"></script>
   <script defer src="src/presentation/controllers/MenuController.js"></script>
   <script defer src="src/presentation/controllers/ModalController.js"></script>
-
-  <!-- 5. Composition Root -->
+  <script defer src="src/presentation/controllers/OrderController.js"></script>
   <script defer src="src/main.js"></script>
 </body>
 </html>
-
