@@ -1,0 +1,12 @@
+{
+  "name": "rio-chicken-menu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RIO Chicken Digital Restaurant Menu with WhatsApp Ordering",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node tests/verify_ordering.js && node tests/verify_dom_ids.js && node tests/verify_bundle.js",
+    "deploy": "firebase deploy --only hosting"
+  }
+}
+

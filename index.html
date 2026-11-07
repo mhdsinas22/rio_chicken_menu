@@ -4,15 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover" />
   <title>ريو تشيكن | RIO Chicken — القائمة الرقمية والطلب عبر واتساب</title>
-  <link rel="icon" href="assets/images/icon/Rio Chicken Flame Emblem.png" />
+  <link rel="icon" href="assets/images/icon/Rio Chicken Flame Emblem-128.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/icon/Rio Chicken Flame Emblem-128.png" />
   <meta name="description" content="RIO Chicken Riyadh mobile-friendly digital menu. Browse broast chicken, burgers, sandwiches, sides, sauces and order directly via WhatsApp." />
   <meta name="theme-color" content="#c9271c" />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
+  <!-- Preload Critical LCP Hero Banner for Immediate Rendering -->
+  <link rel="preload" as="image" href="assets/images/menu/original-menu-banner-600.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/menu/original-menu-banner-1000.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high" />
+
+  <!-- Production Bundled Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.min.css" />
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to menu / تخطي إلى القائمة</a>
@@ -54,7 +56,18 @@
           </div>
         </div>
         <div class="hero-banner">
-          <img src="assets/images/menu/original-menu-banner.jpg" alt="RIO Chicken Menu Preview" decoding="async" />
+          <picture>
+            <source media="(max-width: 640px)" srcset="assets/images/menu/original-menu-banner-600.webp" type="image/webp" />
+            <source media="(min-width: 641px)" srcset="assets/images/menu/original-menu-banner-1000.webp" type="image/webp" />
+            <img
+              src="assets/images/menu/original-menu-banner-optimized.jpg"
+              alt="RIO Chicken Menu Preview"
+              width="480"
+              height="300"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
       </div>
     </section>
@@ -109,7 +122,10 @@
           </div>
           <span class="pill">HD VIEW</span>
         </div>
-        <img class="original-img" src="assets/images/menu/original-menu-banner.jpg" alt="Original RIO Chicken Menu" loading="lazy" decoding="async" />
+        <picture>
+          <source srcset="assets/images/menu/original-menu-banner-1000.webp" type="image/webp" />
+          <img class="original-img" src="assets/images/menu/original-menu-banner-optimized.jpg" alt="Original RIO Chicken Menu" loading="lazy" decoding="async" width="800" height="500" />
+        </picture>
         <div class="original-controls">
           <button type="button" id="openZoom" data-i18n="zoomBtn">🔍 تكبير بملء الشاشة</button>
           <a class="btn yellow-btn" style="flex:1" href="tel:+966503839301" data-i18n="callNumberBtn">📞 اتصال 9301 383 50 966+</a>
@@ -135,7 +151,10 @@
     <!-- Fullscreen Zoom Modal (Original Menu Artwork) -->
     <div class="modal" id="zoomModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Original Menu Full Screen">
       <button class="close" id="closeModal" type="button" aria-label="إغلاق" data-i18n-aria="closeModalAria">×</button>
-      <img src="assets/images/menu/original-menu-zoom.jpg" alt="Full resolution RIO Chicken Menu" loading="lazy" decoding="async" />
+      <picture>
+        <source srcset="assets/images/menu/original-menu-zoom.webp" type="image/webp" />
+        <img src="assets/images/menu/original-menu-zoom.jpg" alt="Full resolution RIO Chicken Menu" loading="lazy" decoding="async" width="1200" height="800" />
+      </picture>
     </div>
 
     <!-- Product Selection Popup Modal -->
@@ -208,9 +227,9 @@
                 <span data-i18n="subtotalLabel">المجموع الفرعي</span>
                 <strong id="cartSubtotal" dir="ltr">0 SAR</strong>
               </div>
-              <div class="summary-row">
+              <div class="summary-row"id='cartDeliveryRow'>
                 <span data-i18n="deliveryFeeLabel">التوصيل</span>
-                <span class="free-badge" data-i18n="freeDeliveryText">مجاني</span>
+             <span class="free-badge" id="cartDeliveryFee">5 SAR</span>
               </div>
               <div class="summary-row total-row">
                 <span data-i18n="totalLabel">الإجمالي النهائي</span>

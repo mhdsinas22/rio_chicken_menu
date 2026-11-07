@@ -288,7 +288,7 @@
       }
 
       gridEl.innerHTML = filteredItems
-        .map((item) => {
+        .map((item, index) => {
           const categoryLabel = this._i18n
             ? this._i18n.getCategoryLabel(item.category)
             : item.category;
@@ -299,7 +299,8 @@
             lang,
             categoryLabel,
             cartQty,
-            addLabel
+            addLabel,
+            index
           });
         })
         .join('');

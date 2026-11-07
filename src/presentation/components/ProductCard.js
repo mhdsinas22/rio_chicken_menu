@@ -30,6 +30,7 @@
      * @param {string} [options.categoryLabel='']
      * @param {number} [options.cartQty=0]
      * @param {string} [options.addLabel='+ أضف']
+     * @param {number} [options.index]
      * @returns {string}
      */
     static render(item, CurrencyFormatter, options = {}) {
@@ -37,6 +38,7 @@
       const categoryLabel = options.categoryLabel || item.category;
       const cartQty = Number(options.cartQty) || 0;
       const addLabel = options.addLabel || (lang === 'ar' ? '+ أضف' : '+ Add');
+      const isEager = typeof options.index === 'number' && options.index < 4;
 
       const displayName = item.getName(lang);
       const displaySub = item.getSubtitle(lang, categoryLabel);
@@ -48,8 +50,11 @@
       const safeQuantity = ProductCard.escapeHtml(displayQty);
       const safeAddLabel = ProductCard.escapeHtml(addLabel);
 
+      const loadingAttr = isEager ? 'eager' : 'lazy';
+      const fetchPriorityAttr = isEager ? 'fetchpriority="high"' : '';
+
       const mediaHtml = item.image
-        ? `<img src="${ProductCard.escapeHtml(item.image)}" alt="${safeName}" loading="lazy" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.parentElement.classList.add('loaded');this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<div class=\\'food-placeholder\\'>${item.emoji}</div>');">`
+        ? `<img src="${ProductCard.escapeHtml(item.image)}" alt="${safeName}" width="240" height="240" loading="${loadingAttr}" ${fetchPriorityAttr} decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="if(!this.dataset.fallbackTried&&this.src.endsWith('.webp')){this.dataset.fallbackTried='1';this.src=this.src.replace(/\\.webp$/i,'.png');}else{this.parentElement.classList.add('loaded');this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<div class=\\'food-placeholder\\'>${item.emoji}</div>');}">`
         : `<div class="food-placeholder">${item.emoji}</div>`;
 
       const photoLoadedClass = item.image ? '' : 'loaded';

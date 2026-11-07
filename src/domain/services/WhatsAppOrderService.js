@@ -130,7 +130,7 @@
      * @param {string} [params.lang] - Language override ('en' | 'ar')
      * @returns {string}
      */
-    buildOrderMessage({ items, subtotal, total, customer, lang }) {
+    buildOrderMessage({ items, subtotal, deliveryFee, total, customer, lang }) {
       const activeLang = lang || (this._i18n ? this._i18n.lang : 'en');
       const isAr = activeLang === 'ar';
       const t = (key) => this._i18n.t(key);
@@ -170,6 +170,9 @@
       lines.push('━━━━━━━━━━━━━━━━━━━━');
       lines.push(t('waSummarySection'));
       lines.push(`• ${t('waSubtotal')}: ${subtotal} SAR`);
+      if (isDelivery) {
+        lines.push(`• ${t('waDeliveryFee')}: ${deliveryFee} SAR`);
+      }
       lines.push(`• *${t('waTotal')}: ${total} SAR*`);
       lines.push('━━━━━━━━━━━━━━━━━━━━');
       lines.push(t('waFooter'));

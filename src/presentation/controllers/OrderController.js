@@ -511,7 +511,7 @@
         const safeImg = this._ProductCard.escapeHtml(item.image);
         productModalMedia.classList.toggle('loaded', !item.image);
         productModalMedia.innerHTML = item.image
-          ? `<img src="${safeImg}" alt="${safeName}" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.parentElement.classList.add('loaded');this.style.display='none';this.parentElement.innerHTML='<div class=\\'food-placeholder\\'>${item.emoji}</div>';">`
+          ? `<img src="${safeImg}" alt="${safeName}" width="400" height="300" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="if(!this.dataset.fallbackTried&&this.src.endsWith('.webp')){this.dataset.fallbackTried='1';this.src=this.src.replace(/\\.webp$/i,'.png');}else{this.parentElement.classList.add('loaded');this.style.display='none';this.parentElement.innerHTML='<div class=\\'food-placeholder\\'>${item.emoji}</div>';}">`
           : `<div class="food-placeholder">${item.emoji}</div>`;
       }
 
@@ -666,7 +666,7 @@
     }
 
     _updateOrderTypeUI() {
-      const isDelivery = this._customer.orderType !== 'pickup';
+      const isDelivery = this._customer.orderType === 'delivery';
       const { pickupTypeBtn, deliveryTypeBtn, deliveryAddressGroup } = this._el;
 
       if (pickupTypeBtn) {
@@ -680,6 +680,13 @@
       if (deliveryAddressGroup) {
         deliveryAddressGroup.style.display = isDelivery ? 'block' : 'none';
       }
+      const deliveryRow = this._el.cartModal?.querySelector('#cartDeliveryRow');
+
+      if (deliveryRow) {
+        deliveryRow.style.display = isDelivery ? 'flex' : 'none';
+      }
+      // Refresh cart amount when order type changes
+      this.renderCartUI();
     }
 
     /**
@@ -689,7 +696,11 @@
       const items = this._cart.getItems();
       const totalCount = this._cart.getTotalCount();
       const subtotal = this._cart.getSubtotal();
-      const total = this._cart.getTotal();
+
+      const deliveryFee =
+        this._customer.orderType === 'delivery' ? 5 : 0;
+
+      const total = subtotal + deliveryFee;
       const lang = this._i18n.lang;
       const isAr = lang === 'ar';
 
@@ -733,6 +744,22 @@
       }
       if (clearCartBtn) {
         clearCartBtn.style.display = hasItems ? 'inline-flex' : 'none';
+      }
+      // Update delivery charge amount
+      const deliveryFeeEl =
+        this._el.cartModal?.querySelector('#cartDeliveryFee');
+
+      if (deliveryFeeEl) {
+        deliveryFeeEl.textContent = `${deliveryFee} SAR`;
+      }
+
+      // Hide delivery row when Pickup is selected
+      const deliveryRow =
+        this._el.cartModal?.querySelector('#cartDeliveryRow');
+
+      if (deliveryRow) {
+        deliveryRow.style.display =
+          this._customer.orderType === 'delivery' ? 'flex' : 'none';
       }
 
       if (cartItemsList && hasItems) {
@@ -826,7 +853,8 @@
     handleConfirmOrder() {
       const items = this._cart.getItems();
       const subtotal = this._cart.getSubtotal();
-      const total = this._cart.getTotal();
+      const deliveryFee = this._customer.orderType === 'delivery' ? 5 : 0;
+      const total = subtotal + deliveryFee;
       if (this._isSubmittingOrder) {
         return { success: false };
       }
@@ -859,6 +887,7 @@
       const message = this._waService.buildOrderMessage({
         items,
         subtotal,
+        deliveryFee,
         total,
         customer: this._customer,
         lang: this._i18n.lang
