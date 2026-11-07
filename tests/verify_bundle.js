@@ -46,7 +46,7 @@ assert.ok(Data.MenuRepository, 'MenuRepository defined');
 assert.ok(Presentation.ProductCard, 'ProductCard defined');
 
 const repo = new Data.MenuRepository(Data.MENU_ITEMS, Data.MENU_CATEGORIES, Domain.MenuItem);
-assert.strictEqual(repo.getAllItems().length, 39, 'Must have 39 items');
+assert.strictEqual(repo.getAllItems().length, 51, 'Must have 51 items');
 
 // Test ProductCard eager vs lazy rendering
 const item = repo.getItemById('item-01');

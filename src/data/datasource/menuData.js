@@ -310,6 +310,21 @@
       "id": "item-18",
       "name": "Zinger Sandwich",
       "nameAr": "ساندوتش زنجر",
+      "price": 10,
+      "category": "Sandwiches",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🥪",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Crispy golden chicken fillet wrapped in soft tortilla bread with fresh lettuce, tomato, and creamy signature sauce.",
+      "popupDescriptionAr": "قطعة دجاج ذهبية ومقرمشة ملفوفة بخبز التورتيلا الطري مع الخس الطازج والطماطم والصوص الكريمي المميز.",
+      "image": "assets/images/items/Crispy Chicken Wrap on Cream Plate.webp"
+    },
+    {
+      "id": "item-19",
+      "name": "Zinger Sandwich Meal",
+      "nameAr": "وجبة ساندويتش زنجر",
       "price": 17,
       "category": "Sandwiches",
       "quantity": "",
@@ -317,14 +332,44 @@
       "emoji": "🥪",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Crispy zinger chicken fillet sandwich with fresh lettuce, cheese, and signature sauce.",
-      "popupDescriptionAr": "ساندوتش زنجر دجاج مقرمش مع الخس الطازج والجبن والصوص المميز.",
+      "popupDescription": "Crispy golden chicken fillet wrapped in soft tortilla bread with fresh lettuce, tomato, and creamy signature sauce, served with golden crispy fries and a chilled Pepsi.",
+      "popupDescriptionAr": "قطعة دجاج ذهبية ومقرمشة ملفوفة بخبز التورتيلا الطري مع الخس الطازج والطماطم والصوص الكريمي المميز، تقدم مع البطاطس المقلية الذهبية المقرمشة وبيبسي بارد.",
       "image": "assets/images/items/Grilled Chicken Wrap Combo with Fries and Pepsi.webp"
     },
     {
-      "id": "item-19",
+      "id": "item-20",
+      "name": "Chicken Sandwich Small",
+      "nameAr": "ساندويتش دجاج صغير",
+      "price": 6,
+      "category": "Sandwiches",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🥪",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "A crispy golden chicken fillet wrapped in soft tortilla bread with fresh lettuce, tomato, and creamy signature sauce.",
+      "popupDescriptionAr": "قطعة دجاج ذهبية ومقرمشة ملفوفة بخبز التورتيلا الطري مع الخس الطازج والطماطم والصوص الكريمي المميز.",
+      "image": "assets/images/items/Crispy Chicken Wrap on White Plate (3).webp"
+    },
+    {
+      "id": "item-21",
       "name": "Chicken Sandwich",
       "nameAr": "ساندوتش دجاج",
+      "price": 10,
+      "category": "Sandwiches",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🥪",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Two crispy golden chicken fillets wrapped in soft tortilla bread with fresh lettuce, tomato, and creamy signature sauce.",
+      "popupDescriptionAr": "قطعتان من فيليه الدجاج الذهبي المقرمش ملفوفتان بخبز التورتيلا الطري مع الخس الطازج والطماطم والصوص الكريمي المميز.",
+      "image": "assets/images/items/Crispy Chicken Wrap on White Plate.webp"
+    },
+    {
+      "id": "item-22",
+      "name": "Chicken Sandwich Meal",
+      "nameAr": "وجبة ساندويتش الدجاج",
       "price": 16,
       "category": "Sandwiches",
       "quantity": "",
@@ -332,14 +377,29 @@
       "emoji": "🥪",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Tender chicken sandwich wrapped with fresh veggies and creamy dressing.",
-      "popupDescriptionAr": "ساندوتش دجاج شهي مع الخضار الطازجة والصوص الكريمي.",
+      "popupDescription": "Two crispy golden chicken fillets wrapped in soft tortilla bread with fresh lettuce, tomato, and creamy signature sauce, served with golden crispy fries and a chilled drink.",
+      "popupDescriptionAr": "قطعتان من فيليه الدجاج الذهبي المقرمش ملفوفتان بخبز التورتيلا الطري مع الخس الطازج والطماطم والصوص الكريمي المميز، تقدمان مع البطاطس المقلية الذهبية المقرمشة ومشروب بارد.",
       "image": "assets/images/items/Crispy Chicken Wrap Feast.webp"
     },
     {
-      "id": "item-20",
+      "id": "item-23",
       "name": "Fish Sandwich",
       "nameAr": "ساندوتش سمك",
+      "price": 10,
+      "category": "Sandwiches",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🥪",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Crispy golden chicken fillet wrapped in soft tortilla bread with golden fries, fresh pickles, and creamy special sauce.",
+      "popupDescriptionAr": "قطعة دجاج ذهبية ومقرمشة ملفوفة بخبز التورتيلا الطري مع البطاطس المقلية والمخللات الطازجة والصوص الخاص الكريمي.",
+      "image": "assets/images/items/Crispy Chicken Wrap on White Plate (1).webp"
+    },
+    {
+      "id": "item-24",
+      "name": "Fish Sandwich Meal",
+      "nameAr": "وجبة ساندويتش السمك",
       "price": 17,
       "category": "Sandwiches",
       "quantity": "",
@@ -347,14 +407,29 @@
       "emoji": "🥪",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Crispy fish fillet sandwich with fresh lettuce and special sauce.",
-      "popupDescriptionAr": "ساندوتش فيليه سمك مقرمش مع الخس الطازج والصوص الخاص.",
+      "popupDescription": "Crispy golden fish fillet wrapped in soft tortilla bread with golden fries, fresh pickles, and creamy special sauce, served with extra crispy fries and a chilled Pepsi.",
+      "popupDescriptionAr": "قطعة فيليه سمك ذهبية ومقرمشة ملفوفة بخبز التورتيلا الطري مع البطاطس المقلية والمخللات الطازجة والصوص الخاص الكريمي، تقدم مع بطاطس مقلية إضافية وبيبسي بارد.",
       "image": "assets/images/items/Crispy Fish Wrap Meal with Fries and Pepsi.webp"
     },
     {
-      "id": "item-21",
+      "id": "item-25",
       "name": "Shrimp Sandwich",
       "nameAr": "ساندوتش جمبري",
+      "price": 10,
+      "category": "Sandwiches",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🥪",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Golden crispy shrimp wrapped in soft tortilla bread with fresh lettuce, red cabbage, juicy pineapple chunks, and creamy signature sauce.",
+      "popupDescriptionAr": "جمبري ذهبي ومقرمش ملفوف بخبز التورتيلا الطري مع الخس الطازج والملفوف الأحمر وقطع الأناناس الطرية والصوص الكريمي المميز.",
+      "image": "assets/images/items/Crispy Shrimp and Pineapple Wrap.webp"
+    },
+    {
+      "id": "item-26",
+      "name": "Shrimp Sandwich Meal",
+      "nameAr": "وجبة ساندويتش الروبيان",
       "price": 17,
       "category": "Sandwiches",
       "quantity": "",
@@ -362,14 +437,29 @@
       "emoji": "🥪",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Golden breaded shrimp sandwich with crisp lettuce and signature cocktail sauce.",
-      "popupDescriptionAr": "ساندوتش جمبري مقرمش مع الخس الطازج وصوص الكوكتيل المميز.",
+      "popupDescription": "Golden crispy shrimp wrapped in soft tortilla bread with fresh lettuce, red cabbage, juicy pineapple chunks, and creamy signature sauce, served with golden crispy fries and a chilled Pepsi.",
+      "popupDescriptionAr": "جمبري ذهبي ومقرمش ملفوف بخبز التورتيلا الطري مع الخس الطازج والملفوف الأحمر وقطع الأناناس والصوص الكريمي المميز، يقدم مع البطاطس المقلية الذهبية المقرمشة وبيبسي بارد.",
       "image": "assets/images/items/Crispy Shrimp Wrap Meal.webp"
     },
     {
-      "id": "item-22",
+      "id": "item-27",
       "name": "Tortilla Wrap",
       "nameAr": "تورتيلا راب",
+      "price": 10,
+      "category": "Sandwiches",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🌯",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Golden crispy chicken strips wrapped in toasted tortilla bread with fresh lettuce, colorful bell peppers, and creamy signature sauce.",
+      "popupDescriptionAr": "قطع دجاج ذهبية ومقرمشة ملفوفة بخبز التورتيلا المحمص مع الخس الطازج والفلفل الحلو الملون والصوص الكريمي المميز.",
+      "image": "assets/images/items/Crispy Fried Chicken Wrap Delight.webp"
+    },
+    {
+      "id": "item-28",
+      "name": "Tortilla Wrap Meal",
+      "nameAr": "وجبة راب التورتيلا",
       "price": 17,
       "category": "Sandwiches",
       "quantity": "",
@@ -377,12 +467,12 @@
       "emoji": "🌯",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Toasted tortilla wrap filled with crispy chicken strips, lettuce, cheese, and sauce.",
-      "popupDescriptionAr": "خبز تورتيلا محمص محشو بستربس الدجاج المقرمش والخس والجبن والصوص.",
+      "popupDescription": "Golden crispy chicken strips wrapped in toasted tortilla bread with fresh lettuce, colorful bell peppers, and creamy signature sauce, served with golden crispy fries and a chilled Pepsi.",
+      "popupDescriptionAr": "قطع دجاج ذهبية ومقرمشة ملفوفة بخبز التورتيلا المحمص مع الخس الطازج والفلفل الحلو الملون والصوص الكريمي المميز، تقدم مع البطاطس المقلية الذهبية المقرمشة وبيبسي بارد.",
       "image": "assets/images/items/Crispy Chicken Tortilla Wrap Meal.webp"
     },
     {
-      "id": "item-23",
+      "id": "item-29",
       "name": "Club Sandwich",
       "nameAr": "كلوب ساندوتش",
       "price": 15,
@@ -397,7 +487,7 @@
       "image": "assets/images/items/Classic Club Sandwich Platter.webp"
     },
     {
-      "id": "item-24",
+      "id": "item-30",
       "name": "Chicken Fries",
       "nameAr": "بطاطس بالدجاج",
       "price": 15,
@@ -412,7 +502,7 @@
       "image": "assets/images/items/Crispy Chicken Fries Bowl.webp"
     },
     {
-      "id": "item-25",
+      "id": "item-31",
       "name": "French Fries",
       "nameAr": "بطاطس مقلية",
       "price": null,
@@ -433,7 +523,7 @@
     },
 
     {
-      "id": "item-26",
+      "id": "item-32",
       "name": "Chicken Burger",
       "nameAr": "برجر دجاج",
       "price": 7,
@@ -443,12 +533,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Delicious chicken burger served in a soft toasted bun with fresh lettuce and creamy burger sauce.",
-      "popupDescription": "برجر دجاج لذيذ يقدم في خبز طري محمص مع الخس الطازج وصوص البرجر الكريمي.",
-      "image": "assets/images/items/Crispy Chicken Burger on Yellow.png"
+      "popupDescription": "Delicious grilled chicken burger with melted cheese, fresh lettuce, tomato, and creamy burger sauce in a soft toasted bun.",
+      "popupDescriptionAr": "برجر دجاج مشوي لذيذ مع الجبن الذائب والخس الطازج والطماطم وصوص البرجر الكريمي في خبز طري محمص.",
+      "image": "assets/images/items/Hyper-Realistic Chicken Burger on Yellow.webp"
     },
     {
-      "id": "item-27",
+      "id": "item-33",
       "name": "Chicken Burger Meal",
       "nameAr": "وجبة برجر الدجاج",
       "price": 16,
@@ -458,12 +548,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Juicy crispy chicken burger with fresh lettuce, cheese, and burger sauce in a toasted bun.",
-      "popupDescriptionAr": "برجر دجاج مقرمش وشهي مع الخس الطازج والجبن وصوص البرجر في خبز محمص.",
+      "popupDescription": "Delicious grilled chicken burger with melted cheese, fresh lettuce, tomato, and creamy burger sauce, served with golden crispy fries and a chilled drink.",
+      "popupDescriptionAr": "برجر دجاج مشوي لذيذ مع الجبن الذائب والخس الطازج والطماطم وصوص البرجر الكريمي، يقدم مع البطاطس المقلية الذهبية المقرمشة ومشروب بارد.",
       "image": "assets/images/items/Crispy Chicken Burger Feast.webp"
     },
     {
-      "id": "item-28",
+      "id": "item-34",
       "name": "Beef Burger",
       "nameAr": "برجر لحم",
       "price": 7,
@@ -473,12 +563,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Grilled beef patty burger topped with melted cheese, fresh veggies, and special sauce.",
-      "popupDescriptionAr": "برجر لحم مشوي مع الجبن الذائب والخضار الطازجة والصوص الخاص.",
-      "image": "assets/images/items/Garlic Sauce Grilled Beef Burger.png"
+      "popupDescription": "Juicy grilled beef patty topped with fresh lettuce, tomato, and creamy burger sauce, served in a soft sesame bun.",
+      "popupDescriptionAr": "قطعة لحم بقري مشوية وعصيرية مع الخس الطازج والطماطم وصوص البرجر الكريمي، تقدم في خبز طري بالسمسم.",
+      "image": "assets/images/items/Sesame Burger on Yellow Background.webp"
     },
     {
-      "id": "item-28",
+      "id": "item-35",
       "name": "Beef Burger Meal",
       "nameAr": "وجبة برجر اللحم",
       "price": 16,
@@ -488,12 +578,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Grilled beef patty burger topped with melted cheese, fresh veggies, and special sauce.",
-      "popupDescriptionAr": "برجر لحم مشوي مع الجبن الذائب والخضار الطازجة والصوص الخاص.",
+      "popupDescription": "Two juicy grilled beef patties layered with melted cheese, fresh lettuce, tomato, onion, and creamy burger sauce, served with golden crispy fries and a chilled drink.",
+      "popupDescriptionAr": "قطعتان من لحم البقر المشوي والعصيري مع الجبن الذائب والخس الطازج والطماطم والبصل وصوص البرجر الكريمي، تقدم مع البطاطس المقلية الذهبية المقرمشة ومشروب بارد.",
       "image": "assets/images/items/Juicy Double Beef Burger Meal.webp"
     },
     {
-      "id": "item-29",
+      "id": "item-36",
       "name": "Zinger Burger",
       "nameAr": "برجر زنجر",
       "price": 8,
@@ -503,12 +593,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Crispy spicy zinger fillet burger with cheese, lettuce, and signature mayo.",
-      "popupDescriptionAr": "برجر زنجر دجاج مقرمش مع الجبن والخس والمايونيز المميز.",
-      "image": "assets/images/items/Crispy Chicken Zinger Burger.png"
+      "popupDescription": "Crispy golden chicken fillet topped with melted cheese, fresh lettuce, tomato, and creamy special sauce, served in a soft sesame bun.",
+      "popupDescriptionAr": "قطعة دجاج مقرمشة ذهبية مع الجبن الذائب والخس الطازج والطماطم والصوص الخاص الكريمي، تقدم في خبز طري بالسمسم.",
+      "image": "assets/images/items/Golden Crispy Chicken Burger.webp"
     },
     {
-      "id": "item-29",
+      "id": "item-37",
       "name": "Zinger Burger Meal",
       "nameAr": "وجبة برجر زنجر",
       "price": 16,
@@ -518,14 +608,29 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Crispy spicy zinger fillet burger with cheese, lettuce, and signature mayo.",
-      "popupDescriptionAr": "برجر زنجر دجاج مقرمش مع الجبن والخس والمايونيز المميز.",
+      "popupDescription": "Spicy crispy chicken fillet topped with melted cheese, fresh lettuce, tomato, and special Zinger sauce, served with golden crispy fries and a chilled drink.",
+      "popupDescriptionAr": "قطعة دجاج زنجر حارة ومقرمشة مع الجبن الذائب والخس الطازج والطماطم وصوص الزنجر الخاص، تقدم مع البطاطس المقلية الذهبية المقرمشة ومشروب بارد.",
       "image": "assets/images/items/Crispy Chicken Zinger Combo.webp"
     },
     {
-      "id": "item-30",
+      "id": "item-38",
       "name": "Chicken Burger Double",
       "nameAr": "برجر دجاج دبل",
+      "price": 10,
+      "category": "Burgers",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🍔",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Two juicy grilled chicken patties layered with melted cheese, fresh lettuce, tomato, and creamy burger sauce, served in a soft sesame bun.",
+      "popupDescriptionAr": "قطعتان من دجاج البرجر المشوي والعصيري مع الجبن الذائب والخس الطازج والطماطم وصوص البرجر الكريمي، تقدم في خبز طري بالسمسم.",
+      "image": "assets/images/items/Hyper-Realistic Double Chicken Burger.webp"
+    },
+    {
+      "id": "item-39",
+      "name": "Chicken Burger Double Meal",
+      "nameAr": "وجبة برجر الدجاج المزدوج",
       "price": 20,
       "category": "Burgers",
       "quantity": "",
@@ -533,14 +638,29 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Double crispy chicken patties with melted cheese, lettuce, and special RIO sauce.",
-      "popupDescriptionAr": "طبقتان من الدجاج المقرمش مع الجبن الذائب والخس وصوص ريو الخاص.",
+      "popupDescription": "Double grilled chicken patties layered with melted cheese, fresh lettuce, tomato, and special RIO sauce, served with golden crispy fries and a chilled drink.",
+      "popupDescriptionAr": "قطعتان من دجاج البرجر المشوي مع الجبن الذائب والخس الطازج والطماطم وصوص ريو الخاص، تقدم مع البطاطس المقلية المقرمشة ومشروب بارد.",
       "image": "assets/images/items/Double Chicken Burger Combo on Yellow.webp"
     },
     {
-      "id": "item-31",
-      "name": "Beef Burger Double",
+      "id": "item-40",
+      "name": "Beef Burger Double ",
       "nameAr": "برجر لحم دبل",
+      "price": 10,
+      "category": "Burgers",
+      "quantity": "",
+      "quantityAr": "",
+      "emoji": "🍔",
+      "description": "",
+      "descriptionAr": "",
+      "popupDescription": "Two juicy grilled beef patties topped with melted cheese, fresh lettuce, tomato, onion, and creamy burger sauce, served in a soft sesame bun.",
+      "popupDescriptionAr": "قطعتان من لحم البقر المشوي والعصيري مع الجبن الذائب والخس الطازج والطماطم والبصل وصوص البرجر الكريمي، تقدم في خبز طري بالسمسم.",
+      "image": "assets/images/items/Gourmet Double Cheeseburger Close-Up.webp"
+    },
+    {
+      "id": "item-41",
+      "name": "Beef Burger Double Meal",
+      "nameAr": "وجبة برجر اللحم المزدوج",
       "price": 20,
       "category": "Burgers",
       "quantity": "",
@@ -548,13 +668,13 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Double grilled beef patties with rich cheese, crisp lettuce, and signature burger sauce.",
-      "popupDescriptionAr": "طبقتان من اللحم المشوي مع الجبن الغني والخس الطازج وصوص البرجر المميز.",
+      "popupDescription": "Two juicy grilled beef patties topped with melted cheese, fresh lettuce, tomato, onion, and creamy burger sauce, served in a soft sesame bun.",
+      "popupDescriptionAr": "قطعتان من لحم البقر المشوي والعصيري مع الجبن الذائب والخس الطازج والطماطم والبصل وصوص البرجر الكريمي، تقدم في خبز طري بالسمسم.",
       "image": "assets/images/items/Double Beef Burger Feast.webp"
     },
 
     {
-      "id": "item-32",
+      "id": "item-42",
       "name": "Fish Burger",
       "nameAr": "برجر سمك",
       "price": 10,
@@ -564,12 +684,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Golden crispy fish fillet burger topped with cheese, lettuce, and tartar sauce.",
-      "popupDescriptionAr": "برجر فيليه سمك ذهبي مقرمش مع الجبن والخس والصوص الخاص.",
-      "image": "assets/images/items/Crispy Sesame Fish Sandwich.png"
+      "popupDescription": "Golden crispy fish fillet topped with fresh lettuce and creamy tartar sauce, served in a soft sesame bun.",
+      "popupDescriptionAr": "فيليه سمك ذهبي ومقرمش مع الخس الطازج وصلصة التارتار الكريمية، يقدم في خبز طري بالسمسم.",
+      "image": "assets/images/items/Crispy Breaded Sandwich on Yellow.webp"
     },
     {
-      "id": "item-32",
+      "id": "item-43",
       "name": "Fish Burger Meal",
       "nameAr": "وجبة برجر السمك",
       "price": 17,
@@ -579,12 +699,12 @@
       "emoji": "🍔",
       "description": "",
       "descriptionAr": "",
-      "popupDescription": "Golden crispy fish fillet burger topped with cheese, lettuce, and tartar sauce.",
-      "popupDescriptionAr": "برجر فيليه سمك ذهبي مقرمش مع الجبن والخس والصوص الخاص.",
+      "popupDescription": "Golden crispy fish fillet topped with fresh lettuce and creamy tartar sauce, served with golden crispy fries and a chilled drink.",
+      "popupDescriptionAr": "فيليه سمك ذهبي ومقرمش مع الخس الطازج وصلصة التارتار الكريمية، يقدم مع البطاطس المقلية الذهبية المقرمشة ومشروب بارد.",
       "image": "assets/images/items/Crispy Fish Burger Meal with Fries and Soda.webp"
     },
     {
-      "id": "item-33",
+      "id": "item-44",
       "name": "Kids Meal",
       "nameAr": "وجبة أطفال",
       "price": 15,
@@ -599,7 +719,7 @@
       "image": "assets/images/items/Colourful Kids Meal with Mango Juice and Nuggets.webp"
     },
     {
-      "id": "item-34",
+      "id": "item-45",
       "name": "Coleslaw",
       "nameAr": "كول سلو",
       "price": 5,
@@ -614,7 +734,7 @@
       "image": "assets/images/items/Creamy Coleslaw in a White Bowl.webp"
     },
     {
-      "id": "item-35",
+      "id": "item-46",
       "name": "Hummus",
       "nameAr": "حمص",
       "price": 6,
@@ -629,7 +749,7 @@
       "image": "assets/images/items/Creamy Hummus with Chickpeas and Parsley.webp"
     },
     {
-      "id": "item-36",
+      "id": "item-47",
       "name": "Garlic Sauce",
       "nameAr": "صوص ثوم",
       "price": 1,
@@ -644,7 +764,7 @@
       "image": "assets/images/items/Creamy Garlic Dip in Black Ramekin.webp"
     },
     {
-      "id": "item-37",
+      "id": "item-48",
       "name": "Garlic Spicy Sauce",
       "nameAr": "صوص ثوم حراق",
       "price": 1,
@@ -659,7 +779,7 @@
       "image": "assets/images/items/Creamy Orange Garlic-Spice Sauce.webp"
     },
     {
-      "id": "item-38",
+      "id": "item-49",
       "name": "Cocktail Sauce",
       "nameAr": "صوص كوكتيل",
       "price": 1,
@@ -674,7 +794,7 @@
       "image": "assets/images/items/Glossy Orange Sauce Cup.webp"
     },
     {
-      "id": "item-39",
+      "id": "item-50",
       "name": "Ketchup",
       "nameAr": "كاتشب",
       "price": 1,
@@ -689,7 +809,7 @@
       "image": "assets/images/items/Glossy Ketchup Spiral in White Bowl.webp"
     },
     {
-      "id": "item-40",
+      "id": "item-51",
       "name": "BBQ Sauce",
       "nameAr": "صوص باربكيو",
       "price": 1,
@@ -773,6 +893,7 @@
       waItemSubtotal: "Subtotal",
       waSummarySection: "💰 *Order Summary*",
       waSubtotal: "Subtotal",
+      waDeliveryFee: "Delivery Fee",
       waTotal: "Final Total",
       waFooter: "Thank you for ordering from RIO Chicken!"
     },
@@ -843,6 +964,7 @@
       waItemSubtotal: "المجموع الفرعي",
       waSummarySection: "💰 *ملخص الطلب*",
       waSubtotal: "المجموع الفرعي",
+      waDeliveryFee: "رسوم التوصيل",
       waTotal: "الإجمالي النهائي",
       waFooter: "شكراً لطلبكم من مطعم ريو تشيكن!"
     }

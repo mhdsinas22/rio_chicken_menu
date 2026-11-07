@@ -35,17 +35,18 @@ for (const rel of scripts) {
 
 const { Domain, Data, Application, Presentation } = global.RioMenu;
 
-// 1. Verify all 39 products and their images
+// 1. Verify all 51 products and their WebP images
 const repo = new Data.MenuRepository(Data.MENU_ITEMS, Data.MENU_CATEGORIES, Domain.MenuItem);
 const allItems = repo.getAllItems();
-assert.strictEqual(allItems.length, 39, 'Must have exactly 39 products');
+assert.strictEqual(allItems.length, 51, 'Must have exactly 51 products');
 
 for (const item of allItems) {
   assert.ok(item.name && item.nameAr, `Item ${item.id} must have both English and Arabic names`);
+  assert.ok(item.image.endsWith('.webp'), `Item ${item.id} image must be WebP: ${item.image}`);
   const imgPath = path.join(projectRoot, item.image);
   assert.ok(fs.existsSync(imgPath), `Image missing on disk for ${item.id}: ${item.image}`);
 }
-console.log('✅ All 39 products and image files verified.');
+console.log('✅ All 51 products and WebP image files verified.');
 
 // 2. Verify bilingual search & category filtering
 const filterUseCase = new Application.FilterMenuItemsUseCase(repo);
@@ -56,14 +57,14 @@ const arabicSearch = filterUseCase.execute({ category: 'All', query: 'زنجر' 
 assert.ok(arabicSearch.length >= 4, 'Arabic query "زنجر" should match Zinger items');
 
 const englishSearch = filterUseCase.execute({ category: 'All', query: 'shrimp' });
-assert.strictEqual(englishSearch.length, 2, 'English query "shrimp" should match 2 items');
+assert.strictEqual(englishSearch.length, 3, 'English query "shrimp" should match 3 items');
 console.log('✅ Category filtering and bilingual search verified.');
 
 // 3. Verify CartService (adding multiple items, French Fries options, updating qty, removing, totals in SAR)
 const cart = new Domain.CartService(repo);
 const broast = repo.getItemById('item-01'); // 18 SAR
-const fries = repo.getItemById('item-25'); // 05 / 07 / 12 SAR options
-const garlic = repo.getItemById('item-35'); // 1 SAR
+const fries = repo.getItemById('item-31'); // 05 / 07 / 12 SAR options
+const garlic = repo.getItemById('item-47'); // 1 SAR
 
 cart.addItem(broast, 2); // 2 * 18 = 36 SAR
 cart.addItem(fries, 1, fries.options[2]); // Large Fries: 1 * 12 = 12 SAR
@@ -77,7 +78,7 @@ assert.strictEqual(cart.getTotal(), 51, 'Total should be 51 SAR');
 cart.changeQuantity('item-01', 1); // now 3 * 18 = 54 SAR -> total 69 SAR
 assert.strictEqual(cart.getTotal(), 69, 'Updated total should be 69 SAR');
 
-cart.removeItem('item-35'); // remove 3 garlic sauces -> total 66 SAR
+cart.removeItem('item-47'); // remove 3 garlic sauces -> total 66 SAR
 assert.strictEqual(cart.getTotal(), 66, 'Total after removing garlic sauce should be 66 SAR');
 
 // Verify localStorage persistence by creating a fresh CartService instance
